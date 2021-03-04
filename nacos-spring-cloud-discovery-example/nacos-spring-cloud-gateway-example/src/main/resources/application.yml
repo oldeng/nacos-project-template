@@ -1,0 +1,23 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: service-getway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+      - id: nacos-getway-provider
+        uri: lb://nacos-provider
+        predicates:
+        - Path=/provider/**
+      - id: nacos-getway-consumer
+        uri: lb://nacos-consumer
+        predicates:
+        - Path=/**
