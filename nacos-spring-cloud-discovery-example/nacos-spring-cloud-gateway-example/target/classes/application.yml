@@ -5,19 +5,22 @@ spring:
     name: service-getway
   cloud:
     nacos:
+      config:
+        server-addr: 127.0.0.1:8848
       discovery:
-        server-addr: localhost:8848
+        server-addr: 127.0.0.1:8848
     gateway:
       discovery:
         locator:
           enabled: true
           lower-case-service-id: true
+      default-filters:
+      - name: Hystrix
+        args:
+          name : default
+          fallbackUri: 'forward:/defaultFallback'
       routes:
-      - id: nacos-getway-provider
-        uri: lb://nacos-provider
+      - id: payment-router
+        uri: lb://service-payment
         predicates:
-        - Path=/provider/**
-      - id: nacos-getway-consumer
-        uri: lb://nacos-consumer
-        predicates:
-        - Path=/**
+        - Path=/pay/**

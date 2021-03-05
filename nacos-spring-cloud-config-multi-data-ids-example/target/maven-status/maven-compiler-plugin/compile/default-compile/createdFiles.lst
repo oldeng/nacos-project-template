@@ -1,0 +1,6 @@
+com\alibaba\nacos\example\spring\cloud\model\User.class
+com\alibaba\nacos\example\spring\cloud\UserApplication.class
+com\alibaba\nacos\example\spring\cloud\service\impl\UserServiceImpl.class
+com\alibaba\nacos\example\spring\cloud\service\UserService.class
+com\alibaba\nacos\example\spring\cloud\dao\UserRepository.class
+com\alibaba\nacos\example\spring\cloud\controller\UserController.class

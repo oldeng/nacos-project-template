@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: service-account
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+      discovery:
+        server-addr: 127.0.0.1:8848
+ribbon:
+  ConnectTimeout: 50000 #请求连接的超时时间，默认时间为1秒
+  ReadTimeout: 50000 #请求处理的超时时间

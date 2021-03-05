@@ -1,0 +1,6 @@
+spring:
+   profiles:
+     active: dev
+server:
+  port: 9006
+sleep: 0

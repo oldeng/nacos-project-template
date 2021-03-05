@@ -1,0 +1,2 @@
+com\alibaba\nacos\example\spring\cloud\NacosConfigApplication.class
+com\alibaba\nacos\example\spring\cloud\controller\ConfigController.class
